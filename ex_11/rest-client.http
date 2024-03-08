@@ -1,0 +1,60 @@
+### Create a new member
+POST http://localhost:8080/api/members
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+}
+
+
+### Get member by ID
+GET http://localhost:8080/api/members/1
+
+
+### Update member by ID
+PUT http://localhost:8080/api/members/1
+Content-Type: application/json
+
+{
+    "name": "Updated Name",
+    "email": "updatedemail@example.com"
+}
+
+
+### Delete member by ID
+DELETE http://localhost:8080/api/members/1
+
+
+### Create a new membership card
+POST http://localhost:8080/api/membership-cards
+Content-Type: application/json
+
+{
+    "cardNumber": "1234567890",
+    "expirationDate": "2022-12-31",
+    "member": {
+        "id": 1
+    }
+}
+
+
+### Get membership card by ID
+GET http://localhost:8080/api/membership-cards/1
+
+
+### Update membership card by ID
+PUT http://localhost:8080/api/membership-cards/1
+Content-Type: application/json
+
+{
+    "cardNumber": "9876543210",
+    "expirationDate": "2024-03-03",
+    "member": {
+        "id": 1
+    }
+}
+
+
+### Delete membership card by ID
+DELETE http://localhost:8080/api/membership-cards/1

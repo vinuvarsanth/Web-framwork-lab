@@ -1,0 +1,92 @@
+### Create User
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+}
+
+
+### Get User by ID
+GET http://localhost:8080/api/users/2
+
+
+### Get All Users
+GET http://localhost:8080/api/users
+
+
+### Update User
+PUT http://localhost:8080/api/users/2
+Content-Type: application/json
+
+{
+    "name": "Updated Name",
+    "email": "updatedemail@example.com"
+}
+
+
+### Delete User
+DELETE http://localhost:8080/api/users/2
+
+
+### Create Device
+POST http://localhost:8080/api/devices
+Content-Type: application/json
+
+{
+    "name": "Device 1",
+    "type": "Type 1",
+    "status": true,
+    "settings": {
+        "setting1": "value1",
+        "setting2": "value2"
+    },
+    "user": {
+        "id": 3
+    }
+}
+
+
+### Get Device by ID
+GET http://localhost:8080/api/devices/2
+
+
+### Get All Devices
+GET http://localhost:8080/api/devices
+
+
+### Update Device
+PUT http://localhost:8080/api/devices/2
+Content-Type: application/json
+
+{
+    "name": "Updated Device",
+    "status": false,
+    "settings": {
+        "setting1": "updatedValue1",
+        "setting2": "updatedValue2"
+    }
+}
+
+
+### Delete Device
+DELETE http://localhost:8080/api/devices/1
+
+
+### Toggle Device Status
+PUT http://localhost:8080/api/devices/2/toggle
+
+
+### Update Device Settings
+PUT http://localhost:8080/api/devices/2/settings
+Content-Type: application/json
+
+{
+    "setting1": "newlyUpdatedValue1",
+    "setting2": "newlyUpdatedValue2"
+}
+
+
+### Get Devices by User ID
+GET http://localhost:8080/api/devices/user/3
